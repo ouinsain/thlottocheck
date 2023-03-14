@@ -230,7 +230,7 @@ def img_ocr(img):
 # img = PILImage.create(fname)
 img = Image.open(fname)
 
-pytesseract.pytesseract.tesseract_cmd = ‘/app/.apt/usr/bin/tesseract’
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # # Call predict func
 # predict(img, learn_inf)
