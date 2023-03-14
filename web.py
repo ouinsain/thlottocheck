@@ -3,9 +3,9 @@ import streamlit as st
 import pandas as pandas
 import numpy as numpy
 import urllib.request
-import fastai
-from fastai.learner import load_learner
-from fastai.vision.all import PILImage
+# import fastai
+# from fastai.learner import load_learner
+# from fastai.vision.all import PILImage
 import glob
 from random import shuffle
 import requests
@@ -232,7 +232,8 @@ def img_ocr(img):
     return lottery_no
 
 # Open image from selected radio button
-img = PILImage.create(fname)
+# img = PILImage.create(fname)
+img = Image.open(fname)
 
 # # Call predict func
 # predict(img, learn_inf)
