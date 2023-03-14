@@ -3,9 +3,6 @@ import streamlit as st
 import pandas as pandas
 import numpy as numpy
 import urllib.request
-# import fastai
-# from fastai.learner import load_learner
-# from fastai.vision.all import PILImage
 import glob
 from random import shuffle
 import requests
@@ -14,11 +11,9 @@ import datetime
 from PIL import Image
 import pytesseract
 import cv2
-import numpy as np
 import imutils
 # from imutils.contours import sort_contours
 import re
-import pandas as pd
 import json
 from pandas import json_normalize
 import ast
