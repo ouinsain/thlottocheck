@@ -2,3 +2,5 @@ streamlit
 opencv-python-headless
 pytesseract
 imutils
+numpy
+pandas
