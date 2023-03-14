@@ -1,7 +1,7 @@
 # Import all necessary packages
 import streamlit as st
 import pandas as pandas
-import numpy as numpy
+import numpy as np
 import urllib.request
 import glob
 from random import shuffle
