@@ -18,7 +18,7 @@ import json
 from pandas import json_normalize
 import ast
 
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+# pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # Create simple title
 st.title('Lottery Tickets Check')
