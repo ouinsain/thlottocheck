@@ -18,6 +18,8 @@ import json
 from pandas import json_normalize
 import ast
 
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+
 # Create simple title
 st.title('Lottery Tickets Check')
 
@@ -229,8 +231,6 @@ def img_ocr(img):
 # Open image from selected radio button
 # img = PILImage.create(fname)
 img = Image.open(fname)
-
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 # # Call predict func
 # predict(img, learn_inf)

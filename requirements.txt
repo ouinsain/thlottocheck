@@ -4,4 +4,3 @@ pytesseract
 imutils
 numpy
 pandas
-freeze
