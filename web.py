@@ -123,7 +123,8 @@ def edge_detect(img, kernel_blur, kernel_thresh, kernel_morph):
     # apply a closing operation using the rectangular kernel to close
     # gaps in between letters -- then apply Otsu's thresholding method
     gradX = cv2.morphologyEx(grad, cv2.MORPH_CLOSE, kernel_thresh)
-    thresh = cv2.threshold(gradX,   90, 255, cv2.THRESH_BINARY)[1]
+    # thresh = cv2.threshold(gradX,   90, 255, cv2.THRESH_BINARY)[1]
+    thresh = cv.adaptiveThreshold(gradX,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY,11,2)
 
     # perform another closing operation, this time using the square
     # kernel to close gaps between lines of the MRZ, then perform a
@@ -132,8 +133,8 @@ def edge_detect(img, kernel_blur, kernel_thresh, kernel_morph):
     thresh_erode = cv2.erode(thresh_close, None, iterations=3)
 
     # st.image(img, use_column_width=True)
-    # st.image(gradX, use_column_width=True)
-    # st.image(thresh, use_column_width=True)
+    st.image(gradX, use_column_width=True)
+    st.image(thresh, use_column_width=True)
     # st.image(thresh_close, use_column_width=True)
     # st.image(thresh_erode, use_column_width=True)
 
